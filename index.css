@@ -36,10 +36,9 @@ body {
 }
 
 h1 {
-  font-size: 29px;
+  font-size: 28px;
   color: var(--text-main);
 }
-
 h1 .highlight {
   color: var(--text-accent);
 }
@@ -73,7 +72,7 @@ h4 {
 }
 
 .settings input[type="number"] {
-  width: 70px;
+  width: 5ch;
   padding: 6px 8px;
   border: 1px solid var(--text-light);
   border-radius: 4px;
@@ -82,6 +81,12 @@ h4 {
   font-size: 16px;
   text-align: center;
   appearance: none;
+}
+
+.settings input[type="number"]::-webkit-inner-spin-button,
+.settings input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 button#gen-btn {
@@ -94,7 +99,6 @@ button#gen-btn {
   cursor: pointer;
   transition: background 0.2s ease;
 }
-
 button#gen-btn:hover {
   background: var(--btn-hover);
 }
@@ -118,4 +122,10 @@ button#gen-btn:hover {
   text-align: center;
   white-space: nowrap;
   overflow: visible;
+
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+#pw .password:hover {
+  box-shadow: 0 0 8px var(--text-accent);
 }
