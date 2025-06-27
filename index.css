@@ -1,0 +1,121 @@
+:root {
+  --bg-page:    #f0f4f8;
+  --bg-card:    #1e2a38;
+  --bg-pass:    #263443;
+  --text-light: #e2e8f0;
+  --text-main:  #fff;
+  --text-accent:#10b981;
+  --text-sub:   #94a3b8;
+  --btn-bg:     #10b981;
+  --btn-hover:  #0f9d7f;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-page);
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background: var(--bg-card);
+  border-radius: 16px;
+  padding: 32px;
+  display: inline-block;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  color: var(--text-light);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+h1 {
+  font-size: 29px;
+  color: var(--text-main);
+}
+
+h1 .highlight {
+  color: var(--text-accent);
+}
+
+h4 {
+  margin-top: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--text-sub);
+  margin-bottom: 24px;
+}
+
+.settings {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.length-group,
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.settings label {
+  font-size: 15px;
+  color: var(--text-light);
+}
+
+.settings input[type="number"] {
+  width: 70px;
+  padding: 6px 8px;
+  border: 1px solid var(--text-light);
+  border-radius: 4px;
+  background: transparent;
+  color: var(--text-light);
+  font-size: 16px;
+  text-align: center;
+  appearance: none;
+}
+
+button#gen-btn {
+  background: var(--btn-bg);
+  color: var(--text-main);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button#gen-btn:hover {
+  background: var(--btn-hover);
+}
+
+#pw {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+#pw .password {
+  flex: 0 1 auto;
+  min-width: 15ch;
+  padding: 12px 16px;
+  background: var(--bg-pass);
+  border-radius: 8px;
+  font-family: 'Courier New', monospace;
+  font-size: 15px;
+  color: var(--text-accent);
+  text-align: center;
+  white-space: nowrap;
+  overflow: visible;
+}
