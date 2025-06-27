@@ -40,7 +40,8 @@ function generate() {
   pw2El.textContent = p2;
 }
 
-function copyPassword(text) {
+function copyPassword(el) {
+  const text = el.textContent;
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text);
   } else {
@@ -51,8 +52,12 @@ function copyPassword(text) {
     document.execCommand("copy");
     document.body.removeChild(tmp);
   }
+  el.style.cursor = 'progress';
+  setTimeout(function() {
+    el.style.cursor = 'pointer';
+  }, 1000);
 }
 
 genBtn.addEventListener("click", generate);
-pw1El.addEventListener("click", function() { copyPassword(pw1El.textContent); });
-pw2El.addEventListener("click", function() { copyPassword(pw2El.textContent); });
+pw1El.addEventListener("click", function() { copyPassword(pw1El); });
+pw2El.addEventListener("click", function() { copyPassword(pw2El); });
